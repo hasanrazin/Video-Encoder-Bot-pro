@@ -187,7 +187,7 @@ async def encode(filepath, message, msg):
     # Metadata Watermark
     m = await db.get_metadata_w(message.from_user.id)
     if m:
-        metadata = '-metadata title=Weeb-Zone.Blogspot.com -metadata:s:v title=Weeb-Zone.Blogspot.com -metadata:s:a title=Weeb-Zone.Blogspot.com'
+        metadata = '-metadata title=Encoded By BongoBondhu -metadata:s:v title=Encoded By BongoBondhu -metadata:s:a title=Encoded By BongoBondhu'
     else:
         metadata = ''
 
