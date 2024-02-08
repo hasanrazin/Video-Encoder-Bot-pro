@@ -30,12 +30,12 @@ if os.path.exists('VideoEncoder/config.env'):
 
 # Variables
 
-api_id = int(os.environ.get("26945639"))
-api_hash = os.environ.get("5d4215db2e3e6e86b62ac187c98dae32")
-bot_token = os.environ.get("6954538253:AAGiW21x60o4_nC2q2Tj2fDjBiHvuQ8kZbM")
+api_id = int(os.environ.get("API_ID"))
+api_hash = os.environ.get("API_HASH")
+bot_token = os.environ.get("BOT_TOKEN")
 
-database = os.environ.get("mongodb+srv://inyourdad007:UGJHdtBuhEUXgMt9@cluster0.jyb7ozn.mongodb.net/")
-session = os.environ.get("encoder")
+database = os.environ.get("MONGO_URI")
+session = os.environ.get("SESSION_NAME")
 
 drive_dir = os.environ.get("DRIVE_DIR")
 index = os.environ.get("INDEX_URL")
@@ -43,13 +43,13 @@ index = os.environ.get("INDEX_URL")
 download_dir = os.environ.get("DOWNLOAD_DIR")
 encode_dir = os.environ.get("ENCODE_DIR")
 
-owner = list(set(int(x) for x in os.environ.get("5049494041").split()))
-sudo_users = list(set(int(x) for x in os.environ.get("50494960").split()))
+owner = list(set(int(x) for x in os.environ.get("OWNER_ID").split()))
+sudo_users = list(set(int(x) for x in os.environ.get("SUDO_USERS").split()))
 everyone = list(set(int(x) for x in os.environ.get("EVERYONE_CHATS").split()))
 all = everyone + sudo_users + owner
 
 try:
-    log = int(os.environ.get("-1001997877315"))
+    log = int(os.environ.get("LOG_CHANNEL"))
 except:
     log = owner
     print('Fill log or give user/channel/group id atleast!')
